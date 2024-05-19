@@ -1,4 +1,4 @@
-import { renderQuotes } from './index.jsx';
+
 
 const quotes = [
   'So many books, so little time.',

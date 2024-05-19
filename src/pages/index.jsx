@@ -4,9 +4,11 @@ import './index.css';
 import { getRandomQuote } from './quotes.js';
 import { moveToTop } from './quotes.js';
 
-document.querySelector('#quote').textContent = getRandomQuote()
+const quoteElement = document.getElementById('root');
+const quote = getRandomQuote();
+quoteElement.innerHTML = `<p>Citát dne: ${quote}</p>`;
 
-export const renderQuotes = (quotes) => {
+const renderQuotes = (quotes) => {
   quotes.forEach((quote) => {
     document.body.innerHTML += `<p>${quote}</p>`;
   });
@@ -24,7 +26,3 @@ allQuotes.forEach((quote, index) => {
     renderQuotes(quote);
   });
 });
-
-const quoteElement = document.getElementById('root');
-const quote = getRandomQuote();
-quoteElement.innerHTML = `<p>Citát dne: ${quote}</p>`;
