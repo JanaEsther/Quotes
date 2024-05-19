@@ -4,7 +4,7 @@ import './index.css';
 import { getRandomQuote } from './quotes.js';
 import { moveToTop } from './quotes.js';
 
-const quoteElement = document.getElementById('root');
+const quoteElement = document.getElementById('quote');
 const quote = getRandomQuote();
 quoteElement.innerHTML = `<p>Citát dne: ${quote}</p>`;
 
