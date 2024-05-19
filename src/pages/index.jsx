@@ -4,6 +4,8 @@ import './index.css';
 import { getRandomQuote } from './quotes.js';
 import { moveToTop } from './quotes.js';
 
+document.querySelector('#quote').textContent = getRandomQuote()
+
 export const renderQuotes = (quotes) => {
   quotes.forEach((quote) => {
     document.body.innerHTML += `<p>${quote}</p>`;
@@ -11,7 +13,7 @@ export const renderQuotes = (quotes) => {
 };
 
 // Vyberte všechny citáty na stránce
-const allQuotes = document.querySelectorAll('.quote');
+const allQuotes = document.querySelectorAll('quote');
 
 // Přidejte posluchač události click na každý citát
 allQuotes.forEach((quote, index) => {
